@@ -104,9 +104,9 @@ int scale(mad_fixed_t sample) {
      return sample >> (MAD_F_FRACBITS + 1 - 16);
 }
 void output(struct mad_header const *header, struct mad_pcm *pcm) {
-    register int nsamples = pcm->length;
+    int nsamples = pcm->length;
     mad_fixed_t const *left_ch = pcm->samples[0], *right_ch = pcm->samples[1];
-    static char stream[1152*4];
+    char stream[1152*4];
     if (pcm->channels == 2) {
         while (nsamples--) {
             signed int sample;
