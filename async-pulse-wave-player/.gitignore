@@ -1,0 +1,8 @@
+
+# Binaries
+*.o
+wave_player
+
+# Eclipse project meta-data
+.cproject
+.project
